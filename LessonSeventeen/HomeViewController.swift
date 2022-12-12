@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 import OtusHomework
 
 public class HomeViewController: UIViewController {
@@ -30,13 +29,11 @@ public class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(randomColorButton)
-        randomColorButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().offset(12)
-            make.leading.equalToSuperview().offset(32)
-            make.trailing.equalToSuperview().offset(-32)
-            make.height.equalTo(55)
-        }
+        randomColorButton.translatesAutoresizingMaskIntoConstraints = false
+        randomColorButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        randomColorButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 32).isActive = true
+        randomColorButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32).isActive = true
+        randomColorButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -12).isActive = true
     }
 
 //    MARK: - Selectors
