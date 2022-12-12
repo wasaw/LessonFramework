@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "LessonSeventeen"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "Merenkov Homework"
 
   spec.description  = <<-DESC
