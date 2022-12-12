@@ -10,6 +10,7 @@
 		BB6C09E4294768A500A3F662 /* LessonSeventeen.h in Headers */ = {isa = PBXBuildFile; fileRef = BB6C09E3294768A500A3F662 /* LessonSeventeen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB6C09EB294768CF00A3F662 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C09EA294768CF00A3F662 /* HomeViewController.swift */; };
 		BB6C09EE2947695600A3F662 /* OtusHomework in Frameworks */ = {isa = PBXBuildFile; productRef = BB6C09ED2947695600A3F662 /* OtusHomework */; };
+		BB6C09F129476E9800A3F662 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BB6C09F029476E9800A3F662 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6C09EE2947695600A3F662 /* OtusHomework in Frameworks */,
+				BB6C09F129476E9800A3F662 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,7 @@
 			name = LessonSeventeen;
 			packageProductDependencies = (
 				BB6C09ED2947695600A3F662 /* OtusHomework */,
+				BB6C09F029476E9800A3F662 /* SnapKit */,
 			);
 			productName = LessonSeventeen;
 			productReference = BB6C09E0294768A500A3F662 /* LessonSeventeen.framework */;
@@ -116,6 +119,7 @@
 			mainGroup = BB6C09D6294768A500A3F662;
 			packageReferences = (
 				BB6C09EC2947695600A3F662 /* XCRemoteSwiftPackageReference "OtusHomework" */,
+				BB6C09EF29476E9800A3F662 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = BB6C09E1294768A500A3F662 /* Products */;
 			projectDirPath = "";
@@ -359,6 +363,14 @@
 				minimumVersion = 0.0.9;
 			};
 		};
+		BB6C09EF29476E9800A3F662 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -366,6 +378,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BB6C09EC2947695600A3F662 /* XCRemoteSwiftPackageReference "OtusHomework" */;
 			productName = OtusHomework;
+		};
+		BB6C09F029476E9800A3F662 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB6C09EF29476E9800A3F662 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
