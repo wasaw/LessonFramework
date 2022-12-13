@@ -20,7 +20,7 @@ public final class HomeViewController: UIViewController {
             btn.backgroundColor = .systemPurple
             btn.layer.borderWidth = 0.7
             btn.layer.cornerRadius = 12
-        btn.addTarget(HomeViewController.self, action: #selector(handleRandomColorButton), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(handleRandomColorButton), for: .touchUpInside)
             return btn
         }()
 
