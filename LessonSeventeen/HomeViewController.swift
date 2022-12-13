@@ -16,11 +16,10 @@ public final class HomeViewController: UIViewController {
     let randomColorButton: UIButton = {
             let btn = UIButton(type: .system)
             btn.setTitle("Рандомный цвет", for: .normal)
-            btn.setTitleColor(.gray, for: .normal)
+            btn.setTitleColor(.white, for: .normal)
             btn.backgroundColor = .systemPurple
             btn.layer.borderWidth = 0.7
             btn.layer.cornerRadius = 12
-        btn.addTarget(self, action: #selector(handleRandomColorButton), for: .touchUpInside)
             return btn
         }()
 
@@ -49,8 +48,11 @@ private extension HomeViewController {
         randomColorButton.translatesAutoresizingMaskIntoConstraints = false
         randomColorButton.centerXAnchor.constraint(equalTo: subView.centerXAnchor).isActive = true
         randomColorButton.heightAnchor.constraint(equalToConstant: 47).isActive = true
-        randomColorButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        randomColorButton.widthAnchor.constraint(equalToConstant: 140).isActive = true
         randomColorButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
+        
+        weak var weakSelf = self
+        randomColorButton.addTarget(self, action: #selector(handleRandomColorButton), for: .touchUpInside)
     }
     
 //    MARK: - Selectors
