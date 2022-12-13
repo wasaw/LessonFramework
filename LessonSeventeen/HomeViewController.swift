@@ -20,7 +20,7 @@ public final class HomeViewController: UIViewController {
             btn.backgroundColor = .systemPurple
             btn.layer.borderWidth = 0.7
             btn.layer.cornerRadius = 12
-            btn.addTarget(self, action: #selector(handleRandomColorButton), for: .touchUpInside)
+        btn.addTarget(HomeViewController.self, action: #selector(handleRandomColorButton), for: .touchUpInside)
             return btn
         }()
 
@@ -56,6 +56,7 @@ private extension HomeViewController {
 //    MARK: - Selectors
         
     @objc func handleRandomColorButton() {
+        print("DEBUG: handleRandomColorButton")
         let red = CGFloat.random(in: 0...255)
         let green = CGFloat.random(in: 0...255)
         let blue = CGFloat.random(in: 0...255)
