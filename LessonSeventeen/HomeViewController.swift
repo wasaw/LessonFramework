@@ -20,6 +20,7 @@ public final class HomeViewController: UIViewController {
             btn.backgroundColor = .systemPurple
             btn.layer.borderWidth = 0.7
             btn.layer.cornerRadius = 12
+            btn.addTarget(self, action: #selector(handleRandomColorButton), for: .touchUpInside)
             return btn
         }()
 
@@ -50,9 +51,6 @@ private extension HomeViewController {
         randomColorButton.heightAnchor.constraint(equalToConstant: 47).isActive = true
         randomColorButton.widthAnchor.constraint(equalToConstant: 140).isActive = true
         randomColorButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
-        
-        weak var weakSelf = self
-        randomColorButton.addTarget(weakSelf, action: #selector(handleRandomColorButton), for: .touchUpInside)
     }
     
 //    MARK: - Selectors
@@ -68,11 +66,11 @@ private extension HomeViewController {
 
 extension HomeViewController: HasOtusHomeworkView {
     public var squareView: UIView? {
-        return view
+        return nil
     }
     
     public var squareViewController: UIViewController? {
-        return nil
+        return self
     }
 }
 
