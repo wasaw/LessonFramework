@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "LessonSeventeen"
-  spec.version      = "0.0.7"
+  spec.version      = "0.0.8"
   spec.summary      = "Merenkov Homework"
 
   spec.description  = <<-DESC
@@ -22,11 +22,12 @@ This is homework
 
 
   spec.author             = { "wasaw" => "merenkovalexander@gmail.com" }
+  spec.platform     = :ios, "13.0"
   spec.source       = { :git => "https://github.com/wasaw/LessonFramework.git", :tag => "#{spec.version}" }
 
   spec.source_files  = "LessonSeventeen/**/*.{swift,h,m}"
   spec.public_header_files = "LessonSeventeen/**/*.{h}"
-  spec.exclude_files = "LessonSPM/Exclude"
+  spec.exclude_files = "LessonSeventeen/Exclude"
 
   spec.dependency 'OtusHomework'
 end
