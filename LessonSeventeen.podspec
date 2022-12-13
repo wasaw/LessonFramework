@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "LessonSeventeen"
-  spec.version      = "0.0.5"
+  spec.version      = "0.0.6"
   spec.summary      = "Merenkov Homework"
 
   spec.description  = <<-DESC
@@ -28,5 +28,5 @@ This is homework
   spec.public_header_files = "LessonSeventeen/**/*.{h}"
   spec.exclude_files = "LessonSPM/Exclude"
 
-
+  spec.dependency 'OtusHomework'
 end
