@@ -52,13 +52,12 @@ private extension HomeViewController {
         randomColorButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
         
         weak var weakSelf = self
-        randomColorButton.addTarget(self, action: #selector(handleRandomColorButton), for: .touchUpInside)
+        randomColorButton.addTarget(weakSelf, action: #selector(handleRandomColorButton), for: .touchUpInside)
     }
     
 //    MARK: - Selectors
         
     @objc func handleRandomColorButton() {
-        print("DEBUG: handleRandomColorButton")
         let red = CGFloat.random(in: 0...255)
         let green = CGFloat.random(in: 0...255)
         let blue = CGFloat.random(in: 0...255)
